@@ -6,12 +6,76 @@
     <title>Aathil Felix Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #23272e 0%, #1a1a40 100%);
+            color: #00ffe7;
+            font-family: 'Fira Mono', monospace;
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #00ffe7, #00ff90, #00ffe7);
+            background-size: 200% 200%;
+            color: transparent;
+            background-clip: text;
+            -webkit-background-clip: text;
+            animation: gradientMove 3s linear infinite;
+        }
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+
+        .terminal-window {
+            box-shadow: 0 8px 32px 0 rgba(0,255,144,0.15);
+        }
+
+        @media (max-width: 576px) {
+        .terminal-window {
+            font-size: 1rem !important;
+        }
+        .terminal-window h1,
+        .gradient-text {
+            font-size: 2rem !important;
+        }
+          .fake-tag {
+            display: none;
+        }
+
+        }
+    </style>
+
 </head>
 <body class="d-flex flex-column min-vh-100 bg-black text-white">
     <main class="flex-grow-1 d-flex justify-content-center align-items-center">
-        <h1><span id="element"></span></h1>
+
+        <div class="terminal-window p-4 rounded" style="background:#23272e; color:#00ff90; font-family:'Fira Mono',monospace; max-width:700px;">
+        <div class="d-flex mb-3" style="gap:6px;">
+            <span style="background:#ff5f56; border-radius:50%; width:12px; height:12px; display:inline-block;"></span>
+            <span style="background:#ffbd2e; border-radius:50%; width:12px; height:12px; display:inline-block;"></span>
+            <span style="background:#27c93f; border-radius:50%; width:12px; height:12px; display:inline-block;"></span>
+        </div>
+
+        <h1 class="mb-0" style="color:#00ff90;">
+            <span class="fake-tag" style="color:#888;">&lt;h1&gt;</span>
+            <span id="element" class="gradient-text"></span>
+            <span class="fake-tag" style="color:#888;">&lt;/h1&gt;</span>        </h1>
+        </h1>
+
     </main>
+
+    <hr style="border-color:#00ff90; opacity:0.2; margin:0;">
+
     <footer class="text-center py-3 bg-dark">
+    <!-- Social icons first -->
+        <a href="https://github.com/AathilFelix" target="_blank" aria-label="GitHub" style="color:#00ff90; margin:0 10px;">
+            <i class="bi bi-github"></i>
+        </a>
+        <a href="https://linkedin.com/in/AathilFelix" target="_blank" aria-label="Linkedin" style="color:#00ff90; margin:0 10px;">
+            <i class="bi bi-linkedin"></i>
+        </a>
+        <br>
         &copy; 2025 Aathil Felix. All rights reserved.
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
@@ -19,14 +83,12 @@
 
     <script>
         var typed = new Typed('#element', {
-        strings: ['Coming Soon'],
+        strings: ['#Coming Soon'],
         typeSpeed: 80,
-        showCursor: true
+        showCursor: false,
         });
     </script>
 
-
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js" integrity="sha384-RuyvpeZCxMJCqVUGFI0Do1mQrods/hhxYlcVfGPOfQtPJh0JCw12tUAZ/Mv10S7D" crossorigin="anonymous"></script>
 </body>
 </html>
